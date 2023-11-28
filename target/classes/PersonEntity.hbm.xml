@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.example.PersonEntity" table="person" schema="public" catalog="pflb_trainingcenter">
+        <id name="id">
+            <column name="id" sql-type="bigint"/>
+        </id>
+        <property name="age">
+            <column name="age" sql-type="integer"/>
+        </property>
+        <property name="firstName">
+            <column name="first_name" sql-type="varchar(255)"/>
+        </property>
+        <property name="money">
+            <column name="money" sql-type="numeric(19,2)" precision="19" scale="2"/>
+        </property>
+        <property name="secondName">
+            <column name="second_name" sql-type="varchar(255)"/>
+        </property>
+        <property name="sex">
+            <column name="sex" sql-type="boolean"/>
+        </property>
+        <property name="houseId">
+            <column name="house_id" sql-type="bigint" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
