@@ -9,11 +9,7 @@
         <property name="connection.username">pflb-at-read</property>
         <property name="connection.password">PflbQaTraining2354</property>
         <mapping resource="PersonEntity.hbm.xml"/>
+        <mapping resource="HouseEntity.hbm.xml"/>
         <mapping class="org.example.PersonEntity"/>
-        <!-- <property name="connection.username"/> -->
-        <!-- <property name="connection.password"/> -->
-
-        <!-- DB schema will be updated if needed -->
-        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
     </session-factory>
 </hibernate-configuration>
