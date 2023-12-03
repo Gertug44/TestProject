@@ -73,7 +73,8 @@ public class UiPflbTests {
                 .createQuery("select id from HouseEntity h " +
                                 "where h.id not in (select h2.id from HouseEntity h2 join PersonEntity p on p.houseId =h2.id) order by RANDOM()",
                         Integer.class).setMaxResults(1).getSingleResult();
-        deletedPage.deleteHouseById(houseEntity);
+        if (!deletedPage.deleteHouseById(houseEntity))
+            fail( "Не удалось удалить объект");
         Thread.sleep(1000);
         var checkDeleted = HibernateConnection.session
                 .createQuery("from HouseEntity h where h.id = "+houseEntity,
