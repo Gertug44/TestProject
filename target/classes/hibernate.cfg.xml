@@ -10,6 +10,6 @@
         <property name="connection.password">PflbQaTraining2354</property>
         <mapping resource="PersonEntity.hbm.xml"/>
         <mapping resource="HouseEntity.hbm.xml"/>
-        <mapping class="org.example.PersonEntity"/>
+        <mapping class="org.example.entityScheme.PersonEntity"/>
     </session-factory>
 </hibernate-configuration>
