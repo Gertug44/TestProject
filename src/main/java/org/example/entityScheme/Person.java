@@ -1,10 +1,8 @@
-package org.example;
+package org.example.entityScheme;
 
-import javax.persistence.*;
 import java.math.BigDecimal;
 
 public class Person implements Comparable<Person>{
-
     private Integer id;
     private int age;
     private String firstName;
@@ -23,5 +21,9 @@ public class Person implements Comparable<Person>{
     public int compareTo(Person o) {
         return this.id.compareTo(o.id);
     }
-
+    public boolean equals(Person p){
+        return this.getId() ==p.getId() && this.getAge() == p.getAge()
+                && this.getFirstName().equals(p.getFirstName()) && this.getSecondName().equals(p.getSecondName())
+                && this.isSex() == p.isSex();
+    }
 }

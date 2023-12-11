@@ -1,4 +1,4 @@
-package org.example;
+package org.example.entityScheme;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -48,14 +48,14 @@ public class PersonEntity implements Comparable<PersonEntity>{
     public int compareTo(PersonEntity o) {
         return this.id.compareTo(o.id);
     }
-    public boolean equal(Person person) {
-        return this.id==person.getId() && this.age == person.getAge()
-                && this.firstName.equals(person.getFirstName()) && this.secondName.equals(person.getSecondName())
-                &&this.sex == person.isSex();
-    }
 
     @Override
     public String toString(){
         return id.toString()+" "+age+" "+firstName+" "+secondName+" "+sex;
+    }
+    public boolean equals(PersonEntity p){
+        return this.getId() ==p.getId() && this.getAge() == p.getAge()
+                && this.getFirstName().equals(p.getFirstName()) && this.getSecondName().equals(p.getSecondName())
+                && this.isSex() == p.isSex();
     }
 }

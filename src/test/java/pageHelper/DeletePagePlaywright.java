@@ -1,13 +1,7 @@
 package pageHelper;
 
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.SelenideElement;
-
-import static com.codeborne.selenide.Selenide.$x;
-
-public class DeletePage {
-    private final SelenideElement deleteHouseInput= $x("//button[contains(text(),\"HOUSE\")]/..//input");
+public class DeletePagePlaywright {
+    /*private final SelenideElement deleteHouseInput= $x("//button[contains(text(),\"HOUSE\")]/..//input");
     private final SelenideElement deleteHouseButton= $x("//button[contains(text(),\"HOUSE\")]");
     private final SelenideElement deleteHouseStatusButton= $x("//button[contains(text(),\"HOUSE\")]/..//button[contains(text(),\"Status\")]");
 
@@ -19,7 +13,7 @@ public class DeletePage {
     private final SelenideElement deleteCarStatusButton= $x("//button[contains(text(),\"CAR\")]/..//button[contains(text(),\"Status\")]");
 
     public void openDeletePage(){
-        Selenide.open(TestsConst.BASE_CLIENT_URL+"/#/delete/all");
+        Selenide.open(Const.BASE_CLIENT_URL+"/#/delete/all");
         deleteHouseInput.shouldBe(Condition.visible);
         deleteUserInput.shouldBe(Condition.visible);
         deleteCarInput.shouldBe(Condition.visible);
@@ -41,5 +35,5 @@ public class DeletePage {
         deleteCarButton.click();
         var deleteStatus = deleteCarStatusButton.text();
         return deleteStatus.substring(deleteStatus.lastIndexOf(" ") + 1).equals("204");
-    }
+    }*/
 }

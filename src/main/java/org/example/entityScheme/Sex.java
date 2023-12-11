@@ -1,4 +1,4 @@
-package org.example;
+package org.example.entityScheme;
 
 public enum Sex {
     MALE(true), FEMALE(false);
